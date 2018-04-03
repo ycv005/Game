@@ -1,5 +1,4 @@
 def compare(player,c):
-    player=player.lower()
     print(player, 'vs', c)
     if player==c:
         print("Draw")
@@ -34,6 +33,11 @@ Enter 'r' for rock, 's' for scissors, and 'p' for paper
 """
 print (rules)
 player=input("Enter your choice: ")
+player=player.lower()
+if player!='r' or player!='s' or player!='p':
+    print("Wrong Input")
+    player=input("Enter your choice once again: ")
+    player=player.lower()
 print("Now computer's role")
 c=randint(1,3)
 if c==1:
